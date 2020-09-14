@@ -1,17 +1,10 @@
-![Imgur](https://i.imgur.com/Cndd8xE.gif)
-
 ## Version1.1
 Todo:
 
--Add categories to JSON questions list
--drag and drop questions from categories
--drag and drop to reorder categories
+* Add categories to JSON questions list
+* Drag and drop questions from categories
+* Drag and drop to reorder categories
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
 
 ### `yarn start`
 
