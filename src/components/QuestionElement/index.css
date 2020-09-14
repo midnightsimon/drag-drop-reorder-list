@@ -1,0 +1,10 @@
+.question-element {
+    background-color: aquamarine;
+    width: 350px;
+    padding: 10px 0px;
+    margin: 2px 0px;
+    text-align: center;
+}
+.question-text {
+    margin: 0;
+}

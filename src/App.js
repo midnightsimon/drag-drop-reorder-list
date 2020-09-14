@@ -1,24 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import SimonTextInput from './components/SimonTextArea' 
+import DraggableList from './components/DraggableList'
+const questionData =[
+  "What's your favorite food?", 
+  "Where would you like to go on vacation?",
+  "Do you prefer mountains or beaches?",
+  "Why is the sky blue?",
+  "What is love?",
+  "Do you think that aliens exist?"
+]
 
 function App() {
+  const [questions, setQuestions] = useState(questionData);
+
+  function handleProcess(newQuestions) {
+    setQuestions(newQuestions);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DraggableList 
+        questions={questions}
+        onChange={handleProcess}
+      />
+      
+      <SimonTextInput 
+        questions={questions}
+        onChange={handleProcess}
+      />
+
     </div>
   );
 }
