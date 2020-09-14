@@ -1,4 +1,4 @@
-![Imgur](https://i.imgur.com/rEz1lqC.gif)
+![Imgur](https://i.imgur.com/Cndd8xE.gif)
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
