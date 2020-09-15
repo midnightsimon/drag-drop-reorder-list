@@ -3,12 +3,12 @@
     flex-direction: column;
     flex: 1;
     width: 100%;
-    align-items: center;
+    align-items: stretch;
 }
 
 .json-text-input {
-    height: 200px;
-    width: 50%;
+    height: 400px;
+    width: 90%;
 }
 
 

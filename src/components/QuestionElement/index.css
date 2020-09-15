@@ -1,9 +1,14 @@
 .question-element {
     background-color: aquamarine;
     width: 350px;
+    height: 110px;
     padding: 10px 0px;
-    margin: 2px 0px;
+    margin: 5px 0px;
     text-align: center;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .question-text {
     margin: 0;
