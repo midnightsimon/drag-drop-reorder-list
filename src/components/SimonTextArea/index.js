@@ -7,7 +7,7 @@ import './index.css'
 function SimonTextInput(props) {
   const textAreaRef = useRef(null);
 
-  function handleOnClick() {
+  const handleOnClick = () => {
     props.onChange(JSON.parse(textAreaRef.current.value))
   }
 

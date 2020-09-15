@@ -26,10 +26,11 @@ const questionData = [
     ]
   },
   {
-    "category": "Testing", "questions": [
-      "Hello?"
+    "category": "Science", "questions": [
+      "How many atoms in the world?",
+      "How far is the Sun away from Earth?"
     ]
-  },
+  }
 ]
 
 function App() {

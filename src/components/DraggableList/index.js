@@ -10,6 +10,7 @@ function DraggableList(props) {
   const [questionFromCat, setQuestionFromCat] = useState(false);
   const [questionBeingDragged, setQuestionBeingDragged] = useState(false);
   const [prevList, setPrevList] = useState(props.questions)
+  const [colors, setColors] = useState({})
 
 
   const handleCategoryQuestions = (category, newQuestions) => {
@@ -57,8 +58,32 @@ function DraggableList(props) {
     setIsCategoryDragging(false);
   }
 
+  const borderColors = [
+    "#EE6EFF",
+    "#F76C6C",
+    "#A8D0E6",
+    "#FF6EC7",
+    "#A64AC9",
+    "#FFFF66",
+    "#1AFE49"
+  ]
+
   const generateQuestionList = () => {
+    if(Object.keys(colors).length === 0) {
+      let i = 0;
+      for (const item of props.questions) {
+        colors[item.category] = borderColors[i % borderColors.length];
+        i++;
+      }
+    }
+
     let questionList = props.questions.map((Q, index) => {
+      if(!(Q.category in colors)) {
+        console.log('not in colors' );
+        let rnd = Math.floor(Math.random() * borderColors.length);
+        colors[Q.category] = borderColors[rnd];
+      }
+      let bgColor = colors[Q.category];
       return (
         <div key={index} data-index={index} data-category={Q.category} draggable onDragStart={onDragStart} onDragOver={onDragOver}>
           <CategoryElement
@@ -69,6 +94,7 @@ function DraggableList(props) {
             questionFromCat={questionFromCat}
             isCategoryDragging={isCategoryDragging}
             questionBeingDragged={questionBeingDragged}
+            borderColor={bgColor}
           />
         </div>
       )
