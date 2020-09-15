@@ -1,10 +1,11 @@
-## Version1.1
-Todo:
+## Version 1.1
+
+### Changes:
 
 * Add categories to JSON questions list
-* Drag and drop questions from categories
 * Drag and drop to reorder categories
 
+![Imgur](https://i.imgur.com/mniLeWK.gif)
 
 ### `yarn start`
 
