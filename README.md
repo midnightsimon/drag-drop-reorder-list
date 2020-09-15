@@ -7,6 +7,14 @@
 
 ![Imgur](https://i.imgur.com/mniLeWK.gif)
 
+
+## Version 1.0 
+[Click Here for Version 1.0](https://github.com/midnightsimon/drag-drop-reorder-list/tree/version1.0)
+
+
+
+
+
 ### `yarn start`
 
 Runs the app in the development mode.<br />

@@ -14,7 +14,7 @@ const questionData = [
   {
     "category": "Sports", "questions": [
       "How many points is a touchdown worth in the NFL?",
-      "How many olympic medalds does Usian Bolt have?",
+      "How many olympic medals does Usian Bolt have?",
       "Lewis Hamilton won his first F1 world championship title with which team?"
     ]
   },
