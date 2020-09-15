@@ -1,0 +1,11 @@
+.category-element {
+    background-color: silver;
+    width: 350px;
+    padding: 10px 10px;
+    margin: 2px 5px;
+    border-radius: 10px;
+    text-align: center;
+}
+.question-text {
+    margin: 0;
+}

@@ -1,11 +1,11 @@
-![Imgur](https://i.imgur.com/Cndd8xE.gif)
+## Version 1.1
 
+### Changes:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+* Add categories to JSON questions list
+* Drag and drop to reorder categories
 
-## Available Scripts
-
-In the project directory, you can run:
+![Imgur](https://i.imgur.com/mniLeWK.gif)
 
 ### `yarn start`
 
