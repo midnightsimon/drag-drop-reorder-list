@@ -1,11 +1,14 @@
-## Version 1.1
+## Version 1.2
 
 ### Changes:
 
-* Add categories to JSON questions list
-* Drag and drop to reorder categories
+* Added different Colors to categories
+* New styling
 
-![Imgur](https://i.imgur.com/mniLeWK.gif)
+![Imgur](https://i.imgur.com/JZ1YfE1.gif)
+
+## Version 1.1
+[Click Here for Version 1.1](https://github.com/midnightsimon/drag-drop-reorder-list/tree/version1.1)
 
 
 ## Version 1.0 

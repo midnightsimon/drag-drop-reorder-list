@@ -43,8 +43,8 @@ function CategoryElement(props) {
   }
 
   return (
-    <div className="category-element">
-      <h3>{props.category}</h3>
+    <div className="category-element" style={{borderWidth: 4, backgroundColor: props.borderColor, borderStyle: "solid", borderRadius: 15}} >
+      <h3 className="category-heading">{props.category}</h3>
       {generateQuestionList()}
     </div>
   );

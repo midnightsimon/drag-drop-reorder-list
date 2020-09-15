@@ -1,5 +1,4 @@
 .category-element {
-    background-color: silver;
     width: 350px;
     padding: 10px 10px;
     margin: 2px 5px;
@@ -8,4 +7,9 @@
 }
 .question-text {
     margin: 0;
+}
+
+.category-heading {
+    font-size: 24px;
+    color: black;
 }
