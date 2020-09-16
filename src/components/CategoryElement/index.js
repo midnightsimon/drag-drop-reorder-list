@@ -51,9 +51,9 @@ function CategoryElement(props) {
   }
 
   const addQuestion = () => {
-    prevList.push(addQuestionInput.current.value);
+    props.questions.push(addQuestionInput.current.value);
     console.log(prevList);
-    props.onChange(props.category, prevList);
+    props.onChange(props.category, props.questions);
     setIsAdding(false);
   }
 
