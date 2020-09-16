@@ -1,7 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import './index.css'
 import QuestionElement from '../QuestionElement'
-import Modal from '../Modal';
 
 
 function CategoryElement(props) {
@@ -10,11 +9,6 @@ function CategoryElement(props) {
   const [prevList, setPrevList] = useState(props.questions)
   const [isAdding, setIsAdding] = useState(false);
   const addQuestionInput = useRef(null);
-
-  useEffect(() => {
-    console.log('cat', props.category)
-  }, [props.category]);
-
 
   const onDragStart = (event) => {
     const draggedFrom = parseInt(event.currentTarget.dataset.index);
@@ -51,17 +45,13 @@ function CategoryElement(props) {
   }
 
   const addQuestion = () => {
-    props.questions.push(addQuestionInput.current.value);
-    console.log(prevList);
+    props.questions.push(addQuestionInput.current.value); 
     props.onChange(props.category, props.questions);
     setIsAdding(false);
   }
 
   const deleteQuestion = (idx) => {
-    console.log(props.category);
-    console.log(idx);
-    let filteredList = props.questions.slice(0)
-    console.log(filteredList);
+    let filteredList = props.questions.slice(0) 
     filteredList.splice(idx, 1);
     props.onChange(props.category, filteredList);
   }

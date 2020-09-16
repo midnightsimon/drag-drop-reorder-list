@@ -15,8 +15,6 @@ function DraggableList(props) {
 
   const handleCategoryQuestions = (category, newQuestions) => {
     let newList = props.questions.slice(0);
-    console.log('hand cat quest', category);
-    console.log(newList);
     newList.forEach((item) => {
       if (item.category === category) {
         item.questions = newQuestions
@@ -81,7 +79,6 @@ function DraggableList(props) {
 
     let questionList = props.questions.map((Q, index) => {
       if(!(Q.category in colors)) {
-        console.log('not in colors' );
         let rnd = Math.floor(Math.random() * borderColors.length);
         colors[Q.category] = borderColors[rnd];
       }
