@@ -5,7 +5,7 @@
 * Added ability to add questions to category
 * Added ability to delete questions from category
 
-![Imgur](https://i.imgur.com/RahP4B4.gif)
+![Imgur](https://i.imgur.com/pl0Cv1s.gif)
 
 ## Version 1.2
 [Click Here for Version 1.2](https://github.com/midnightsimon/drag-drop-reorder-list/tree/version1.2)
