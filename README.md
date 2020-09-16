@@ -4,6 +4,7 @@
 
 * Added ability to add questions to category
 * Added ability to delete questions from category
+* Category now shows number of questions in title
 
 ![Imgur](https://i.imgur.com/pl0Cv1s.gif)
 
