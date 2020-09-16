@@ -1,11 +1,14 @@
-## Version 1.2
+## Version 1.3
 
 ### Changes:
 
-* Added different Colors to categories
-* New styling
+* Added ability to add questions to category
+* Added ability to delete questions from category
 
-![Imgur](https://i.imgur.com/JZ1YfE1.gif)
+![Imgur](https://i.imgur.com/RahP4B4.gif)
+
+## Version 1.2
+[Click Here for Version 1.2](https://github.com/midnightsimon/drag-drop-reorder-list/tree/version1.2)
 
 ## Version 1.1
 [Click Here for Version 1.1](https://github.com/midnightsimon/drag-drop-reorder-list/tree/version1.1)

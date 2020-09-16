@@ -10,7 +10,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 .question-text {
     margin: 0;
+}
+
+.delete-question-button {
+    position: absolute;
+    background-color: transparent;
+    border-color: transparent;
+    font-size: larger;
+    padding: 5px 5px;
+    top: 0;
+    right: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }

@@ -1,12 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './index.css'
 import QuestionElement from '../QuestionElement'
+import Modal from '../Modal';
 
 
 function CategoryElement(props) {
 
   const [from, setFrom] = useState(null);
   const [prevList, setPrevList] = useState(props.questions)
+  const [isAdding, setIsAdding] = useState(false);
+  const addQuestionInput = useRef(null);
+
+  useEffect(() => {
+    console.log('cat', props.category)
+  }, [props.category]);
+
 
   const onDragStart = (event) => {
     const draggedFrom = parseInt(event.currentTarget.dataset.index);
@@ -35,17 +43,55 @@ function CategoryElement(props) {
     let questionList = props.questions.map((QuestionText, index) => {
       return (
         <div key={index} data-index={index} data-category={props.category} draggable onDragStart={onDragStart} onDragOver={onDragOver} onDragEnd={onDragEnd}>
-          <QuestionElement questionText={QuestionText} />
+          <QuestionElement index={index} onDeleteClick={deleteQuestion} questionText={QuestionText} />
         </div>
       )
     })
     return questionList;
   }
 
+  const addQuestion = () => {
+    prevList.push(addQuestionInput.current.value);
+    console.log(prevList);
+    props.onChange(props.category, prevList);
+    setIsAdding(false);
+  }
+
+  const deleteQuestion = (idx) => {
+    console.log(props.category);
+    console.log(idx);
+    let filteredList = props.questions.slice(0)
+    console.log(filteredList);
+    filteredList.splice(idx, 1);
+    props.onChange(props.category, filteredList);
+  }
+
+  const showAddButton = () => {
+    if(isAdding) {
+      return(
+        <div className="add-question">
+          <input ref={addQuestionInput} className="add-question-input" />
+          <div className="add-question-buttons">
+            <button className="add-question-submit" onClick={addQuestion}>submit</button>
+            <button className="add-question-submit" onClick={() => setIsAdding(false)}>cancel</button>
+          </div>
+        </div>
+      )
+    } else {
+      return(
+        <button className="add-button" onClick={() => setIsAdding(true)}>
+        +
+      </button>
+      )
+    }
+  }
+
   return (
     <div className="category-element" style={{borderWidth: 4, backgroundColor: props.borderColor, borderStyle: "solid", borderRadius: 15}} >
-      <h3 className="category-heading">{props.category}</h3>
+      <h3 className="category-heading">{props.category} ({props.questions.length})</h3>
       {generateQuestionList()}
+      {showAddButton()}
+
     </div>
   );
 }

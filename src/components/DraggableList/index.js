@@ -14,7 +14,9 @@ function DraggableList(props) {
 
 
   const handleCategoryQuestions = (category, newQuestions) => {
-    let newList = prevList.slice(0);
+    let newList = props.questions.slice(0);
+    console.log('hand cat quest', category);
+    console.log(newList);
     newList.forEach((item) => {
       if (item.category === category) {
         item.questions = newQuestions
