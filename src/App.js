@@ -44,7 +44,6 @@ function App() {
     <div className="App">
       <DraggableList questions={questions} onChange={handleProcess} />
       <SimonTextInput questions={questions} onChange={handleProcess} />
-
     </div>
   );
 }
