@@ -1,3 +1,5 @@
+This was a take-home project for a company I was interviewing for.
+
 ## Version 1.3
 
 ### Changes:
